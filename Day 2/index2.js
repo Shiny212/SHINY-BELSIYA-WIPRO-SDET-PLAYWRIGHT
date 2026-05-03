@@ -8,7 +8,7 @@ console.log(Math.floor(Math.random() * 100) + 1); // 1 to 100
 console.log("Type Conversion-------------------------------\n");
 let str_num = "007";
 console.log(Number(str_num));
-console.log(String(007));
+console.log(String(7));
 
 let val = "3.7";
 console.log(parseInt(val)); // 3
@@ -29,6 +29,6 @@ colors.unshift("violet"); // Adds "violet" to the beginning of the array
 console.log(colors); // ["violet", "red", "green", "blue", "white", "black"]
 colors.shift(); // Removes the first element ("violet")
 console.log(colors); // ["red", "green", "blue", "white", "black"]
-console.log(colors.splice(0, 1));
-console.log(colors.splice(1, 2));
-console.log(colors.splice(1, 3));
+console.log(colors.slice(0, 1));
+console.log(colors.slice(1, 2));
+console.log(colors.slice(1, 3));
