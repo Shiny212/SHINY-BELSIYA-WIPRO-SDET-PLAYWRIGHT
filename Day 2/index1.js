@@ -29,7 +29,7 @@ let sum = (x, y) => x + y;
 console.log("Sum of 2 and 4:", sum(2, 4)); // 6
 
 console.log("Array & Filter Functions-------------------------------\n");
-let arr = [1, 2, 3, 4, 5, "Arun"];
+let arr = [1, 2, 3, 4, 5, "Sindhu"];
 
 arr.filter(x => typeof x === "number").map(y => y * 2).forEach(table => console.log("Element after * 2:", table * 2));
-console.log(arr.find(x => x === "Arun N")); // undefined
+console.log(arr.find(x => x === "Sindhu")); // undefined
