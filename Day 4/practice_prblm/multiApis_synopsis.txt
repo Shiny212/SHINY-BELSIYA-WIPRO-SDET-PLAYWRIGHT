@@ -1,0 +1,92 @@
+================================================================================
+JAVASCRIPT TRAINING SYNOPSIS – DAY 4 (API FETCH & DATA OPERATIONS)
+================================================================================
+
+--------------------------------------------------------------------------------
+DAY 4: FETCH API, FILTER, MAP & PROMISE HANDLING
+--------------------------------------------------------------------------------
+
+This session focuses on fetching data from APIs and performing operations like 
+filtering and mapping using JavaScript Promises.
+
+--------------------------------------------------------------------------------
+1. FETCH API
+--------------------------------------------------------------------------------
+- fetch() is used to request data from an external API.
+- It returns a Promise.
+
+Example:
+    fetch("https://jsonplaceholder.typicode.com/todos")
+
+--------------------------------------------------------------------------------
+2. CONVERTING RESPONSE TO JSON
+--------------------------------------------------------------------------------
+- API response is converted into usable format using .json().
+
+Example:
+    .then(res => res.json())
+
+--------------------------------------------------------------------------------
+3. FILTER OPERATION
+--------------------------------------------------------------------------------
+- filter() is used to select specific data based on condition.
+
+Example:
+    .then(data => data.filter(d => d.id <= 10))
+
+--------------------------------------------------------------------------------
+4. MAP OPERATION
+--------------------------------------------------------------------------------
+- map() is used to transform or extract required values.
+
+Example:
+    .then(data => data.map(d => d.title))
+
+--------------------------------------------------------------------------------
+5. CHAINING (PROMISE FLOW)
+--------------------------------------------------------------------------------
+- Multiple .then() methods are chained to process data step-by-step.
+
+Flow:
+    fetch → json → filter → map → output
+
+--------------------------------------------------------------------------------
+6. OUTPUT DISPLAY
+--------------------------------------------------------------------------------
+- console.log() is used to display final processed data.
+
+Example:
+    .then(console.log)
+
+--------------------------------------------------------------------------------
+7. ERROR HANDLING
+--------------------------------------------------------------------------------
+- .catch() handles errors like network issues or wrong API.
+
+Example:
+    .catch(console.error)
+
+--------------------------------------------------------------------------------
+8. MULTIPLE API USAGE
+--------------------------------------------------------------------------------
+- Different APIs are used to practice real-time data handling.
+- Same pattern is followed for all APIs.
+
+--------------------------------------------------------------------------------
+9. REAL-TIME USAGE
+--------------------------------------------------------------------------------
+- Fetching data from servers
+- Displaying dynamic content
+- Data filtering and transformation
+- Backend communication
+
+--------------------------------------------------------------------------------
+KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+- fetch() is used to get API data.
+- .then() handles successful responses.
+- filter() selects required data.
+- map() modifies or extracts values.
+- .catch() handles errors.
+- Promise chaining improves readability and flow.
+================================================================================
