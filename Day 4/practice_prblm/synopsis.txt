@@ -1,0 +1,105 @@
+================================================================================
+JAVASCRIPT TRAINING SYNOPSIS – DAY 4
+================================================================================
+
+--------------------------------------------------------------------------------
+DAY 4: ASYNCHRONOUS JAVASCRIPT & PROMISES
+--------------------------------------------------------------------------------
+
+The concepts covered on Day 4 focus on handling asynchronous operations in 
+JavaScript using Promises, setTimeout, and setInterval.
+
+--------------------------------------------------------------------------------
+1. ASYNCHRONOUS JAVASCRIPT
+--------------------------------------------------------------------------------
+- JavaScript executes code line by line (synchronous).
+- Asynchronous operations allow tasks to run in the background.
+- Used for API calls, timers, file handling, etc.
+
+--------------------------------------------------------------------------------
+2. PROMISES
+--------------------------------------------------------------------------------
+- A Promise represents a future value (success or failure).
+- It has 3 states:
+    Pending → Initial state
+    Resolved → Operation successful
+    Rejected → Operation failed
+
+Syntax:
+    new Promise((resolve, reject) => { })
+
+--------------------------------------------------------------------------------
+3. PROMISE IMPLEMENTATION
+--------------------------------------------------------------------------------
+- The function getData() returns a Promise.
+- setTimeout() is used to simulate delay (2 seconds).
+- After delay, resolve() sends the result.
+
+Example:
+    function getData() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Data received");
+            }, 2000);
+        });
+    }
+
+--------------------------------------------------------------------------------
+4. HANDLING PROMISES
+--------------------------------------------------------------------------------
+- then() → handles success
+- catch() → handles errors
+
+Example:
+    getData()
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+
+--------------------------------------------------------------------------------
+5. setTimeout()
+--------------------------------------------------------------------------------
+- Executes a function once after a delay.
+
+Example:
+    setTimeout(() => {
+        console.log("Data received after 5 seconds");
+    }, 5000);
+
+--------------------------------------------------------------------------------
+6. setInterval()
+--------------------------------------------------------------------------------
+- Executes a function repeatedly at fixed intervals.
+
+Example:
+    setInterval(() => {
+        console.log("Checking for new data...");
+    }, 3000);
+
+--------------------------------------------------------------------------------
+7. REAL-TIME USAGE
+--------------------------------------------------------------------------------
+- Fetching data from APIs
+- Loading content dynamically
+- Polling servers for updates
+- Background processing
+
+--------------------------------------------------------------------------------
+8. KEY DIFFERENCE
+--------------------------------------------------------------------------------
+- setTimeout → runs once after delay
+- setInterval → runs continuously after every interval
+- Promise → handles async result in structured way
+
+--------------------------------------------------------------------------------
+KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+- Promises simplify asynchronous code handling.
+- then() and catch() improve readability.
+- setTimeout is used for delayed execution.
+- setInterval is used for repeated execution.
+- Asynchronous programming is essential for real-world applications.
+================================================================================
