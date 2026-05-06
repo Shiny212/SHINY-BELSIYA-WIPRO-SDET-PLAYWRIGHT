@@ -1,0 +1,160 @@
+================================================================================
+JAVASCRIPT TRAINING SYNOPSIS – DAY 5
+================================================================================
+
+--------------------------------------------------------------------------------
+DAY 5: ASYNC/AWAIT & OBJECT ORIENTED PROGRAMMING (OOPS)
+--------------------------------------------------------------------------------
+
+This session focuses on asynchronous programming using async/await and 
+Object Oriented Programming concepts in JavaScript such as Classes, 
+Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
+--------------------------------------------------------------------------------
+1. ASYNC/AWAIT
+--------------------------------------------------------------------------------
+- async and await are used to handle asynchronous operations.
+- async makes a function return a Promise.
+- await pauses execution until Promise is resolved.
+
+Example:
+    async function getData() {
+        let data = await fetch(url);
+    }
+
+Features:
+- Cleaner syntax
+- Easier to read
+- Better than long Promise chaining
+
+--------------------------------------------------------------------------------
+2. FETCH API USING ASYNC/AWAIT
+--------------------------------------------------------------------------------
+- fetch() requests data from APIs.
+- await waits for response.
+- JSON data is extracted using .json().
+
+Example:
+    let data = await fetch(url);
+    data = await data.json();
+
+Operations performed:
+- filter()
+- map()
+- console.log()
+
+--------------------------------------------------------------------------------
+3. MULTIPLE API HANDLING
+--------------------------------------------------------------------------------
+- Multiple APIs were fetched and processed.
+- Data was filtered and modified using JavaScript functions.
+
+APIs used:
+- Todos API
+- Posts API
+- Comments API
+- Users API
+- Albums API
+- Photos API
+- Cat Facts API
+- Dog Facts API
+- Random User API
+- Pokemon API
+
+--------------------------------------------------------------------------------
+4. CLASSES & OBJECTS
+--------------------------------------------------------------------------------
+- A class is a blueprint for creating objects.
+- Objects are created using the new keyword.
+- Constructors initialize object values.
+
+Example:
+    class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+--------------------------------------------------------------------------------
+5. ENCAPSULATION
+--------------------------------------------------------------------------------
+- Encapsulation hides internal data from direct access.
+- Private variables are declared using # symbol.
+
+Example:
+    class BankAccount {
+        #balance = 0;
+    }
+
+Features:
+- Data security
+- Controlled access
+- Better maintainability
+
+--------------------------------------------------------------------------------
+6. INHERITANCE
+--------------------------------------------------------------------------------
+- Inheritance allows one class to acquire properties and methods of another class.
+- extends keyword is used.
+- super() calls parent constructor or methods.
+
+Example:
+    class Admin extends User {
+    }
+
+Features:
+- Code reusability
+- Parent-child relationship
+- Method overriding
+
+--------------------------------------------------------------------------------
+7. POLYMORPHISM
+--------------------------------------------------------------------------------
+- Polymorphism means same method behaves differently in different classes.
+- Methods can be overridden in child classes.
+
+Example:
+    draw() method in Circle and Square classes.
+
+Features:
+- Flexibility
+- Dynamic behavior
+- Improved scalability
+
+--------------------------------------------------------------------------------
+8. ABSTRACTION
+--------------------------------------------------------------------------------
+- Abstraction hides implementation details and shows only important functionality.
+- Private methods help achieve abstraction.
+
+Example:
+    class CoffeMachine {
+        #boilWater()
+    }
+
+Features:
+- Hides complexity
+- Cleaner implementation
+- Better security
+
+--------------------------------------------------------------------------------
+9. REAL-TIME APPLICATIONS
+--------------------------------------------------------------------------------
+- APIs are used in web and mobile applications.
+- Banking systems use encapsulation.
+- Login systems use inheritance.
+- Graphic applications use polymorphism.
+- Coffee machines and automation systems use abstraction.
+
+--------------------------------------------------------------------------------
+KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+- async/await simplifies asynchronous programming.
+- fetch() is used to retrieve API data.
+- filter() and map() process API responses.
+- OOPS concepts improve code structure and reusability.
+- Encapsulation protects data.
+- Inheritance enables code reuse.
+- Polymorphism provides flexibility.
+- Abstraction hides unnecessary implementation details.
+================================================================================
