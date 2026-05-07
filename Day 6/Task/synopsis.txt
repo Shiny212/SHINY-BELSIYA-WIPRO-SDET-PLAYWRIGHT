@@ -133,3 +133,63 @@ KEY TAKEAWAYS
 - JSON.stringify() converts objects into JSON format.
 - setTimeout() simulates delayed processing.
 ================================================================================
+--------------------------------------------------------------------------------
+7. CALLBACK FUNCTIONS
+--------------------------------------------------------------------------------
+- A callback function is a function passed as an argument to another function.
+- It is executed after the main function completes its task.
+- forEach() also uses callback functions.
+
+Example:
+    function greetUser(name, callback) {
+        console.log("Hello " + name);
+        callback();
+    }
+
+Uses:
+- Reusing functions
+- Handling repeated operations
+- Higher order functions
+
+--------------------------------------------------------------------------------
+8. PROTOTYPE INHERITANCE
+--------------------------------------------------------------------------------
+- Prototype inheritance allows objects to share methods.
+- Methods added to prototype are not copied into every object.
+- All objects created from the same constructor can use the shared method.
+
+Example:
+    person.prototype.sayHi = function() {
+        console.log("hello " + this.name);
+    }
+
+Key Point:
+- me.sayHi === you.sayHi returns true because both objects share the same method.
+
+--------------------------------------------------------------------------------
+9. STACK AND HEAP MEMORY
+--------------------------------------------------------------------------------
+- Stack stores primitive values like number and string.
+- Heap stores reference values like objects and arrays.
+- Primitive values are copied by value.
+- Objects and arrays are copied by reference.
+
+Example:
+    let obj1 = { name: "Shiny" };
+    let obj2 = obj1;
+
+If obj2 is changed, obj1 also changes because both point to the same object in heap.
+
+--------------------------------------------------------------------------------
+10. SPREAD OPERATOR
+--------------------------------------------------------------------------------
+- Spread operator (...) is used to combine arrays or objects.
+- It helps copy and merge values easily.
+
+Example:
+    let c = [...a, ...b, 10];
+
+Uses:
+- Combining arrays
+- Copying objects
+- Merging object properties
