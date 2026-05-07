@@ -1,0 +1,135 @@
+================================================================================
+JAVASCRIPT TRAINING SYNOPSIS – DAY 6 (TASKS)
+================================================================================
+
+--------------------------------------------------------------------------------
+DAY 6: DATA PROCESSING, CALLBACKS & ARRAY OPERATIONS
+--------------------------------------------------------------------------------
+
+This session focuses on solving real-time problem statements using JavaScript 
+concepts such as arrays, objects, filtering, mapping, sorting, callbacks, 
+JSON conversion, and delayed execution.
+
+--------------------------------------------------------------------------------
+1. FLIGHT BOOKING DATA CLEANER
+--------------------------------------------------------------------------------
+- Raw flight data strings were converted into structured objects.
+- Data was parsed using split().
+- Invalid or missing prices were handled using Number() and isNaN().
+
+Operations performed:
+- String parsing
+- Object creation
+- Number conversion
+- Validation
+- Filtering
+- Sorting
+- JSON conversion
+
+Example:
+    "London-Paris:150"
+
+Converted to:
+    {
+        from: "London",
+        to: "Paris",
+        price: 150
+    }
+
+Filtering:
+- Flights between $100 and $500.
+
+Sorting:
+- Ascending order by price.
+
+--------------------------------------------------------------------------------
+2. E-COMMERCE DISCOUNT APPLICATOR
+--------------------------------------------------------------------------------
+- Shopping cart items were processed using callback functions.
+- Eligible products received 10% discount.
+
+Conditions:
+- Category must be "Electronics"
+- Price must be greater than $200
+
+Features:
+- Callback function
+- map()
+- Conditional logic
+- Template literals
+- setTimeout()
+
+Additional property:
+    isDiscounted → true/false
+
+--------------------------------------------------------------------------------
+3. MOVIE STREAM ANALYTICS
+--------------------------------------------------------------------------------
+- Movie data strings were converted into structured objects.
+- Invalid view counts were replaced with 0.
+
+Operations performed:
+- split()
+- Number conversion
+- isNaN()
+- filter()
+- sort()
+- JSON.stringify()
+
+Filtering:
+- Only "Action" and "Sci-Fi" movies
+- More than 5000 views
+
+Sorting:
+- Descending order by views
+
+--------------------------------------------------------------------------------
+4. AUTOMATED PAYROLL PROCESSOR
+--------------------------------------------------------------------------------
+- Employee payroll was processed using callback functions.
+- Tax was calculated based on salary.
+
+Tax Rules:
+- Salary > 5000 → 20% tax
+- Salary <= 5000 → 10% tax
+
+Additional calculations:
+- netSalary
+- employee status
+
+Status:
+- netSalary > 4000 → Premium
+- Otherwise → Standard
+
+Features:
+- Callback function
+- map()
+- Template literals
+- setTimeout()
+
+--------------------------------------------------------------------------------
+5. ARRAY METHODS USED
+--------------------------------------------------------------------------------
+- filter() → select required data
+- map() → transform objects
+- sort() → arrange data
+- push() → add objects to array
+
+--------------------------------------------------------------------------------
+6. REAL-TIME APPLICATIONS
+--------------------------------------------------------------------------------
+- Travel booking systems
+- E-commerce websites
+- Movie streaming analytics
+- Payroll management systems
+
+--------------------------------------------------------------------------------
+KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+- String data can be converted into structured objects.
+- Validation helps avoid invalid data.
+- Callback functions improve flexibility.
+- filter(), map(), and sort() simplify array processing.
+- JSON.stringify() converts objects into JSON format.
+- setTimeout() simulates delayed processing.
+================================================================================
