@@ -1,53 +1,59 @@
 // JavaScript Coding Problems for Practice - All Answers in One File
+// User Input Version using prompt-sync
+
+const prompt = require("prompt-sync")();
 
 // =====================================================
 // 1. VARIABLES & DATA TYPES
 // =====================================================
 
-// 1. Swap two numbers without third variable
-let a1 = 10;
-let b1 = 20;
+// 1. Swap two numbers without using third variable
+let a1 = Number(prompt("Enter first number: "));
+let b1 = Number(prompt("Enter second number: "));
 a1 = a1 + b1;
 b1 = a1 - b1;
 a1 = a1 - b1;
-console.log("Swap:", a1, b1);
+console.log("After Swap:", a1, b1);
 
 // 2. Check data type
-let value = null;
-if (value === null) {
+let value = prompt("Enter any value: ");
+if (value === "null") {
     console.log("Type: null");
-} else if (value === undefined) {
+} else if (value === "undefined") {
     console.log("Type: undefined");
+} else if (value === "true" || value === "false") {
+    console.log("Type: boolean");
+} else if (!isNaN(Number(value))) {
+    console.log("Type: number");
 } else {
-    console.log("Type:", typeof value);
+    console.log("Type: string");
 }
 
 // 3. Celsius to Fahrenheit
-let celsius = 30;
+let celsius = Number(prompt("Enter Celsius value: "));
 let fahrenheit = (celsius * 9 / 5) + 32;
 console.log("Fahrenheit:", fahrenheit);
 
 // 4. Simple calculator
-let num1 = 10;
-let num2 = 5;
+let num1 = Number(prompt("Enter first calculator number: "));
+let num2 = Number(prompt("Enter second calculator number: "));
 console.log("Add:", num1 + num2);
 console.log("Sub:", num1 - num2);
 console.log("Mul:", num1 * num2);
 console.log("Div:", num1 / num2);
 
 // 5. Calculate age
-let birthYear = 2003;
-let currentYear = 2026;
+let birthYear = Number(prompt("Enter birth year: "));
+let currentYear = Number(prompt("Enter current year: "));
 let age = currentYear - birthYear;
 console.log("Age:", age);
-
 
 // =====================================================
 // 2. STRINGS
 // =====================================================
 
 // 1. Reverse string without reverse()
-let str1 = "Shiny";
+let str1 = prompt("Enter string to reverse: ");
 let reversed = "";
 for (let i = str1.length - 1; i >= 0; i--) {
     reversed += str1[i];
@@ -55,7 +61,7 @@ for (let i = str1.length - 1; i >= 0; i--) {
 console.log("Reversed:", reversed);
 
 // 2. Count vowels
-let str2 = "JavaScript";
+let str2 = prompt("Enter string to count vowels: ");
 let vowelCount = 0;
 for (let i = 0; i < str2.length; i++) {
     let ch = str2[i].toLowerCase();
@@ -66,7 +72,7 @@ for (let i = 0; i < str2.length; i++) {
 console.log("Vowels:", vowelCount);
 
 // 3. Palindrome string
-let str3 = "madam";
+let str3 = prompt("Enter string to check palindrome: ");
 let rev3 = "";
 for (let i = str3.length - 1; i >= 0; i--) {
     rev3 += str3[i];
@@ -78,7 +84,7 @@ if (str3 === rev3) {
 }
 
 // 4. Capitalize first letter of every word
-let sentence1 = "hello world javascript";
+let sentence1 = prompt("Enter sentence to capitalize: ");
 let words1 = sentence1.split(" ");
 let capitalized = "";
 for (let i = 0; i < words1.length; i++) {
@@ -86,8 +92,8 @@ for (let i = 0; i < words1.length; i++) {
 }
 console.log("Capitalized:", capitalized);
 
-// 5. Longest word
-let sentence2 = "JavaScript is a powerful language";
+// 5. Find longest word
+let sentence2 = prompt("Enter sentence to find longest word: ");
 let words2 = sentence2.split(" ");
 let longest = words2[0];
 for (let i = 1; i < words2.length; i++) {
@@ -96,7 +102,6 @@ for (let i = 1; i < words2.length; i++) {
     }
 }
 console.log("Longest Word:", longest);
-
 
 // =====================================================
 // 3. NUMBERS & MATH
@@ -107,7 +112,7 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
 console.log("Random Number:", randomNumber);
 
 // 2. Prime number check
-let primeNum = 17;
+let primeNum = Number(prompt("Enter number to check prime: "));
 let isPrime = true;
 if (primeNum <= 1) {
     isPrime = false;
@@ -121,7 +126,7 @@ for (let i = 2; i < primeNum; i++) {
 console.log("Prime:", isPrime);
 
 // 3. Factorial
-let factNum = 5;
+let factNum = Number(prompt("Enter number for factorial: "));
 let factorial = 1;
 for (let i = 1; i <= factNum; i++) {
     factorial *= i;
@@ -129,7 +134,7 @@ for (let i = 1; i <= factNum; i++) {
 console.log("Factorial:", factorial);
 
 // 4. Fibonacci series
-let n = 7;
+let n = Number(prompt("Enter count for Fibonacci series: "));
 let f1 = 0;
 let f2 = 1;
 console.log("Fibonacci:");
@@ -141,7 +146,7 @@ for (let i = 1; i <= n; i++) {
 }
 
 // 5. Armstrong number
-let armNum = 153;
+let armNum = Number(prompt("Enter number to check Armstrong: "));
 let tempArm = armNum;
 let sumArm = 0;
 while (tempArm > 0) {
@@ -151,13 +156,12 @@ while (tempArm > 0) {
 }
 console.log("Armstrong:", sumArm === armNum);
 
-
 // =====================================================
 // 4. ARRAYS
 // =====================================================
 
 // 1. Largest and smallest
-let arr1 = [10, 5, 30, 2, 50];
+let arr1 = prompt("Enter numbers separated by comma: ").split(",").map(Number);
 let largest = arr1[0];
 let smallest = arr1[0];
 for (let i = 1; i < arr1.length; i++) {
@@ -167,7 +171,7 @@ for (let i = 1; i < arr1.length; i++) {
 console.log("Largest:", largest, "Smallest:", smallest);
 
 // 2. Remove duplicates
-let arr2 = [1, 2, 2, 3, 4, 4];
+let arr2 = prompt("Enter duplicate numbers separated by comma: ").split(",").map(Number);
 let uniqueArr = [];
 for (let i = 0; i < arr2.length; i++) {
     if (!uniqueArr.includes(arr2[i])) {
@@ -177,7 +181,7 @@ for (let i = 0; i < arr2.length; i++) {
 console.log("Unique:", uniqueArr);
 
 // 3. Sort without sort()
-let arr3 = [5, 2, 8, 1];
+let arr3 = prompt("Enter numbers to sort separated by comma: ").split(",").map(Number);
 for (let i = 0; i < arr3.length; i++) {
     for (let j = i + 1; j < arr3.length; j++) {
         if (arr3[i] > arr3[j]) {
@@ -190,7 +194,7 @@ for (let i = 0; i < arr3.length; i++) {
 console.log("Sorted:", arr3);
 
 // 4. Second largest
-let arr4 = [10, 40, 20, 50, 30];
+let arr4 = prompt("Enter numbers to find second largest: ").split(",").map(Number);
 let firstLargest = -Infinity;
 let secondLargest = -Infinity;
 for (let i = 0; i < arr4.length; i++) {
@@ -204,8 +208,8 @@ for (let i = 0; i < arr4.length; i++) {
 console.log("Second Largest:", secondLargest);
 
 // 5. Merge two arrays and remove duplicates
-let arr5a = [1, 2, 3];
-let arr5b = [3, 4, 5];
+let arr5a = prompt("Enter first array separated by comma: ").split(",").map(Number);
+let arr5b = prompt("Enter second array separated by comma: ").split(",").map(Number);
 let merged = [...arr5a, ...arr5b];
 let mergedUnique = [];
 for (let i = 0; i < merged.length; i++) {
@@ -215,16 +219,15 @@ for (let i = 0; i < merged.length; i++) {
 }
 console.log("Merged Unique:", mergedUnique);
 
-
 // =====================================================
 // 5. OBJECTS
 // =====================================================
 
 // 1. Student object and display dynamically
 let student = {
-    name: "Shiny",
-    age: 22,
-    course: "CSE"
+    name: prompt("Enter student name: "),
+    age: Number(prompt("Enter student age: ")),
+    course: prompt("Enter student course: ")
 };
 for (let key in student) {
     console.log(key + ": " + student[key]);
@@ -235,20 +238,20 @@ let keyCount = Object.keys(student).length;
 console.log("Key Count:", keyCount);
 
 // 3. Merge two objects
-let objA = { name: "Shiny" };
-let objB = { age: 22 };
+let objA = { name: prompt("Enter object name: ") };
+let objB = { age: Number(prompt("Enter object age: ")) };
 let mergedObj = { ...objA, ...objB };
 console.log("Merged Object:", mergedObj);
 
-// 4. Object into keys and values array
+// 4. Object keys and values
 console.log("Keys:", Object.keys(student));
 console.log("Values:", Object.values(student));
 
 // 5. Shopping cart total
 let cart = {
-    item1: 100,
-    item2: 200,
-    item3: 300
+    item1: Number(prompt("Enter item1 price: ")),
+    item2: Number(prompt("Enter item2 price: ")),
+    item3: Number(prompt("Enter item3 price: "))
 };
 let totalBill = 0;
 for (let key in cart) {
@@ -256,13 +259,12 @@ for (let key in cart) {
 }
 console.log("Total Bill:", totalBill);
 
-
 // =====================================================
 // 6. LOOPS
 // =====================================================
 
-// 1. Star pyramid
-let rows = 5;
+// 1. Star pyramid pattern
+let rows = Number(prompt("Enter number of rows: "));
 for (let i = 1; i <= rows; i++) {
     let pattern = "";
     for (let j = 1; j <= i; j++) {
@@ -271,25 +273,26 @@ for (let i = 1; i <= rows; i++) {
     console.log(pattern);
 }
 
-// 2. Multiplication tables 1 to 10
+// 2. Multiplication table
+let tableNum = Number(prompt("Enter table number: "));
 for (let i = 1; i <= 10; i++) {
-    for (let j = 1; j <= 10; j++) {
-        console.log(i + " x " + j + " = " + (i * j));
-    }
+    console.log(tableNum + " x " + i + " = " + (tableNum * i));
 }
 
-// 3. Sum of even numbers 1 to 100
+// 3. Sum of even numbers
+let evenLimit = Number(prompt("Enter limit for even sum: "));
 let evenSum = 0;
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= evenLimit; i++) {
     if (i % 2 === 0) {
         evenSum += i;
     }
 }
 console.log("Even Sum:", evenSum);
 
-// 4. Prime numbers 1 to 100
-console.log("Prime Numbers 1 to 100:");
-for (let i = 2; i <= 100; i++) {
+// 4. Prime numbers up to limit
+let primeLimit = Number(prompt("Enter limit for prime numbers: "));
+console.log("Prime Numbers:");
+for (let i = 2; i <= primeLimit; i++) {
     let prime = true;
     for (let j = 2; j < i; j++) {
         if (i % j === 0) {
@@ -302,13 +305,12 @@ for (let i = 2; i <= 100; i++) {
 
 // 5. Number guessing game
 let secretNumber = 7;
-let guess = 7;
+let guess = Number(prompt("Guess number between 1 and 10: "));
 while (guess !== secretNumber) {
     console.log("Wrong guess");
-    break;
+    guess = Number(prompt("Try again: "));
 }
 console.log("Correct guess");
-
 
 // =====================================================
 // 7. FUNCTIONS
@@ -320,7 +322,10 @@ function greatestOfThree(a, b, c) {
     else if (b >= a && b >= c) return b;
     else return c;
 }
-console.log("Greatest:", greatestOfThree(10, 20, 15));
+let g1 = Number(prompt("Enter first number: "));
+let g2 = Number(prompt("Enter second number: "));
+let g3 = Number(prompt("Enter third number: "));
+console.log("Greatest:", greatestOfThree(g1, g2, g3));
 
 // 2. Number palindrome
 function isNumberPalindrome(num) {
@@ -333,45 +338,54 @@ function isNumberPalindrome(num) {
     }
     return original === reverse;
 }
-console.log("Number Palindrome:", isNumberPalindrome(121));
+let palNum = Number(prompt("Enter number to check palindrome: "));
+console.log("Number Palindrome:", isNumberPalindrome(palNum));
 
 // 3. Currency conversion
 function convertCurrency(amount, rate) {
     return amount * rate;
 }
-console.log("Currency:", convertCurrency(10, 83));
+let amount = Number(prompt("Enter amount: "));
+let rate = Number(prompt("Enter conversion rate: "));
+console.log("Currency:", convertCurrency(amount, rate));
 
 // 4. Return even numbers from array
 function getEvenNumbers(arr) {
     return arr.filter(num => num % 2 === 0);
 }
-console.log("Even Numbers:", getEvenNumbers([1, 2, 3, 4, 5, 6]));
+let evenInput = prompt("Enter numbers separated by comma: ").split(",").map(Number);
+console.log("Even Numbers:", getEvenNumbers(evenInput));
 
 // 5. Calculator using functions
 function add(a, b) { return a + b; }
 function subtract(a, b) { return a - b; }
 function multiply(a, b) { return a * b; }
 function divide(a, b) { return a / b; }
-console.log(add(10, 5), subtract(10, 5), multiply(10, 5), divide(10, 5));
-
+let calA = Number(prompt("Enter first calculator number: "));
+let calB = Number(prompt("Enter second calculator number: "));
+console.log("Add:", add(calA, calB));
+console.log("Sub:", subtract(calA, calB));
+console.log("Mul:", multiply(calA, calB));
+console.log("Div:", divide(calA, calB));
 
 // =====================================================
 // 8. SCOPE & HOISTING
 // =====================================================
 
-// 1. Variable hoisting
+// 1. Variable hoisting example
 console.log("Hoisting var:", hoistVar);
-var hoistVar = "Hello";
+var hoistVar = prompt("Enter hoisted variable value: ");
+console.log("After assignment:", hoistVar);
 
 // 2. Block scope using let
 {
-    let blockValue = 100;
+    let blockValue = prompt("Enter block value: ");
     console.log("Block Value:", blockValue);
 }
 
 // 3. Closure behavior
 function outerFunction() {
-    let message = "Hello Closure";
+    let message = prompt("Enter closure message: ");
     function innerFunction() {
         console.log(message);
     }
@@ -382,7 +396,7 @@ closureDemo();
 
 // 4. Nested functions
 function outer() {
-    let outerValue = "Outer";
+    let outerValue = prompt("Enter outer value: ");
     function inner() {
         console.log("Access:", outerValue);
     }
@@ -390,26 +404,26 @@ function outer() {
 }
 outer();
 
-// 5. Correct scoping
-let scopeName = "Shiny";
+// 5. Correct variable scoping
+let scopeName = prompt("Enter outside scope name: ");
 if (true) {
-    let scopeName = "Sindhu";
+    let scopeName = prompt("Enter inside scope name: ");
     console.log("Inside:", scopeName);
 }
 console.log("Outside:", scopeName);
-
 
 // =====================================================
 // 9. CALLBACK FUNCTIONS & SETTIMEOUT
 // =====================================================
 
 // 1. Delayed greeting
+let delayedName = prompt("Enter name for delayed greeting: ");
 setTimeout(() => {
-    console.log("Hello after delay");
+    console.log("Hello " + delayedName);
 }, 1000);
 
 // 2. Countdown timer
-let count = 3;
+let count = Number(prompt("Enter countdown number: "));
 let timer = setInterval(() => {
     console.log(count);
     count--;
@@ -423,11 +437,14 @@ let timer = setInterval(() => {
 function calculator(a, b, callback) {
     return callback(a, b);
 }
-console.log("Callback Add:", calculator(5, 3, add));
+let cbA = Number(prompt("Enter first callback calculator number: "));
+let cbB = Number(prompt("Enter second callback calculator number: "));
+console.log("Callback Add:", calculator(cbA, cbB, add));
 
 // 4. Food ordering callback
 function orderFood(callback) {
-    console.log("Food ordered");
+    let food = prompt("Enter food name: ");
+    console.log(food + " ordered");
     callback();
 }
 function deliverFood() {
@@ -445,29 +462,31 @@ function step2() {
 }
 step1(step2);
 
-
 // =====================================================
 // 10. ARROW FUNCTIONS
 // =====================================================
 
-// 1. Normal to arrow
+// 1. Arrow greeting
 const greet = () => {
-    console.log("Hello");
+    let name = prompt("Enter name for arrow greeting: ");
+    console.log("Hello " + name);
 };
 greet();
 
-// 2. One-line arrow
+// 2. One-line arrow function
 const square = n => n * n;
-console.log("Square:", square(5));
+let squareNum = Number(prompt("Enter number to square: "));
+console.log("Square:", square(squareNum));
 
 // 3. Arrow with map()
-let numbers1 = [1, 2, 3];
+let numbers1 = prompt("Enter numbers for doubling: ").split(",").map(Number);
 let doubled = numbers1.map(n => n * 2);
 console.log("Doubled:", doubled);
 
 // 4. Even/odd checker
 const checkEvenOdd = n => n % 2 === 0 ? "Even" : "Odd";
-console.log(checkEvenOdd(7));
+let evenOddNum = Number(prompt("Enter number to check even/odd: "));
+console.log(checkEvenOdd(evenOddNum));
 
 // 5. Grade calculator
 const gradeCalculator = marks => {
@@ -475,105 +494,106 @@ const gradeCalculator = marks => {
     else if (marks >= 75) return "B";
     else return "C";
 };
-console.log("Grade:", gradeCalculator(85));
-
+let marksInput = Number(prompt("Enter marks: "));
+console.log("Grade:", gradeCalculator(marksInput));
 
 // =====================================================
 // 11. MAP, FILTER, FOREACH
 // =====================================================
 
-// 1. Double numbers
-let nums = [1, 2, 3, 4];
-console.log(nums.map(n => n * 2));
+// 1. Double numbers using map()
+let nums = prompt("Enter numbers separated by comma: ").split(",").map(Number);
+console.log("Doubled:", nums.map(n => n * 2));
 
-// 2. Students above 80
+// 2. Filter students above 80
 let students = [
-    { name: "Shiny", marks: 90 },
-    { name: "Sindhu", marks: 70 }
+    { name: prompt("Enter first student name: "), marks: Number(prompt("Enter first student marks: ")) },
+    { name: prompt("Enter second student name: "), marks: Number(prompt("Enter second student marks: ")) }
 ];
-console.log(students.filter(s => s.marks > 80));
+console.log("Above 80:", students.filter(s => s.marks > 80));
 
-// 3. Print values using forEach()
+// 3. Print array values using forEach()
 nums.forEach(n => console.log(n));
 
 // 4. Names uppercase
-let names = ["shiny", "sindhu"];
-console.log(names.map(n => n.toUpperCase()));
+let names = prompt("Enter names separated by comma: ").split(",");
+console.log("Uppercase:", names.map(n => n.toUpperCase()));
 
 // 5. Extract even numbers
-console.log(nums.filter(n => n % 2 === 0));
-
+console.log("Even Numbers:", nums.filter(n => n % 2 === 0));
 
 // =====================================================
 // 12. PRIMITIVE VS REFERENCE TYPES
 // =====================================================
 
 // 1. Primitive copy
-let p1 = 10;
+let p1 = Number(prompt("Enter primitive value: "));
 let p2 = p1;
-p2 = 20;
-console.log(p1, p2);
+p2 = Number(prompt("Enter changed copied value: "));
+console.log("Original:", p1);
+console.log("Copied:", p2);
 
 // 2. Object reference
-let ref1 = { name: "Shiny" };
+let ref1 = { name: prompt("Enter object name: ") };
 let ref2 = ref1;
-ref2.name = "Sindhu";
-console.log(ref1.name);
+ref2.name = prompt("Enter changed name: ");
+console.log("Original object name:", ref1.name);
 
 // 3. Clone object
-let originalObj = { name: "Shiny", age: 22 };
+let originalObj = { name: prompt("Enter original name: "), age: Number(prompt("Enter age: ")) };
 let clonedObj = { ...originalObj };
-clonedObj.name = "Sindhu";
-console.log(originalObj, clonedObj);
+clonedObj.name = prompt("Enter cloned object new name: ");
+console.log("Original Object:", originalObj);
+console.log("Cloned Object:", clonedObj);
 
 // 4. Compare arrays
 let arA = [1, 2];
 let arB = [1, 2];
-console.log(arA === arB);
+console.log("Arrays Equal:", arA === arB);
 
 // 5. Shallow copy
-let shallow1 = { name: "Shiny" };
+let shallow1 = { name: prompt("Enter shallow copy name: ") };
 let shallow2 = { ...shallow1 };
-console.log(shallow2);
-
+console.log("Shallow Copy:", shallow2);
 
 // =====================================================
 // 13. STACK & HEAP MEMORY
 // =====================================================
 
 // 1. Stack memory
-let stackA = 5;
+let stackA = Number(prompt("Enter stack value: "));
 let stackB = stackA;
-stackB = 10;
-console.log(stackA, stackB);
+stackB = Number(prompt("Enter changed stack value: "));
+console.log("Stack A:", stackA);
+console.log("Stack B:", stackB);
 
-// 2. Heap reference
-let heapA = { value: 5 };
+// 2. Heap memory
+let heapA = { value: Number(prompt("Enter heap value: ")) };
 let heapB = heapA;
-heapB.value = 10;
-console.log(heapA.value);
+heapB.value = Number(prompt("Enter changed heap value: "));
+console.log("Heap A Value:", heapA.value);
 
 // 3. Object mutation
-let userObj = { name: "Shiny" };
+let userObj = { name: prompt("Enter user name: ") };
 let sameUser = userObj;
-sameUser.name = "Sindhu";
-console.log(userObj.name);
+sameUser.name = prompt("Enter changed user name: ");
+console.log("User Object:", userObj);
 
 // 4. Memory output prediction
-let m1 = 100;
+let m1 = Number(prompt("Enter memory value: "));
 let m2 = m1;
-m2 = 200;
-console.log(m1);
+m2 = Number(prompt("Enter changed memory value: "));
+console.log("Original Memory Value:", m1);
 
-// 5. Memory diagram explanation
-console.log("Stack stores primitive values, Heap stores objects and arrays.");
-
+// 5. Memory explanation
+console.log("Stack stores primitive values.");
+console.log("Heap stores objects and arrays.");
 
 // =====================================================
 // 14. CALL STACK
 // =====================================================
 
-// 1. Nested function execution order
+// 1. Nested function call order
 function first() {
     console.log("First");
     second();
@@ -592,69 +612,68 @@ function recursiveFactorial(n) {
     if (n === 1) return 1;
     return n * recursiveFactorial(n - 1);
 }
-console.log("Recursive Factorial:", recursiveFactorial(5));
+let recFactNum = Number(prompt("Enter recursive factorial number: "));
+console.log("Recursive Factorial:", recursiveFactorial(recFactNum));
 
 // 3. Recursive Fibonacci
 function recursiveFibonacci(n) {
     if (n <= 1) return n;
     return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
 }
-console.log("Recursive Fibonacci:", recursiveFibonacci(6));
+let recFibNum = Number(prompt("Enter recursive Fibonacci position: "));
+console.log("Recursive Fibonacci:", recursiveFibonacci(recFibNum));
 
 // 4. Stack overflow simulation
-// function overflow() {
-//     overflow();
-// }
-// overflow();
+console.log("Stack overflow happens when a function calls itself continuously without stopping.");
 
 // 5. Call stack flow
 console.log("Call Stack Flow: first() -> second() -> third() -> return back");
-
 
 // =====================================================
 // 15. JSON PROBLEMS
 // =====================================================
 
 // 1. JSON string to object
-let jsonString = '{"name":"Shiny","age":22}';
+let jsonName = prompt("Enter JSON name: ");
+let jsonAge = Number(prompt("Enter JSON age: "));
+let jsonString = '{"name":"' + jsonName + '","age":' + jsonAge + '}';
 let jsonObject = JSON.parse(jsonString);
-console.log(jsonObject);
+console.log("JSON Object:", jsonObject);
 
 // 2. Object to JSON string
-let objectData = { name: "Sindhu", age: 25 };
+let objectData = { name: prompt("Enter object name: "), age: Number(prompt("Enter object age: ")) };
 let jsonData = JSON.stringify(objectData);
-console.log(jsonData);
+console.log("JSON String:", jsonData);
 
 // 3. Parse API-like JSON
 let apiData = '[{"id":1,"name":"Shiny"},{"id":2,"name":"Sindhu"}]';
 let parsedApiData = JSON.parse(apiData);
 parsedApiData.forEach(item => console.log(item.name));
 
-// 4. JSON array of employees
+// 4. JSON employee records
 let employees = [
-    { id: 1, name: "Alice", salary: 5000 },
-    { id: 2, name: "Bob", salary: 3000 }
+    { id: 1, name: prompt("Enter employee 1 name: "), salary: Number(prompt("Enter employee 1 salary: ")) },
+    { id: 2, name: prompt("Enter employee 2 name: "), salary: Number(prompt("Enter employee 2 salary: ")) }
 ];
-console.log(JSON.stringify(employees));
+console.log("Employees JSON:", JSON.stringify(employees));
 
 // 5. Filter JSON data
 let highSalary = employees.filter(emp => emp.salary > 4000);
-console.log(highSalary);
-
+console.log("High Salary Employees:", highSalary);
 
 // =====================================================
 // MINI PROJECTS
 // =====================================================
 
 // 1. Student Grade Calculator
-let studentMarks = 85;
+let studentMarks = Number(prompt("Enter student marks: "));
 if (studentMarks >= 90) console.log("Grade A");
 else if (studentMarks >= 75) console.log("Grade B");
 else console.log("Grade C");
 
 // 2. ATM Withdrawal Simulator
-let balance = 5000;
-let withdrawAmount = 1000;
+let balance = Number(prompt("Enter ATM balance: "));
+let withdrawAmount = Number(prompt("Enter withdraw amount: "));
 if (withdrawAmount <= balance) {
     balance -= withdrawAmount;
     console.log("Withdrawal Successful. Balance:", balance);
@@ -664,36 +683,37 @@ if (withdrawAmount <= balance) {
 
 // 3. To-Do List using Arrays
 let todoList = [];
-todoList.push("Learn JavaScript");
-todoList.push("Practice Coding");
-console.log(todoList);
+todoList.push(prompt("Enter first task: "));
+todoList.push(prompt("Enter second task: "));
+console.log("Todo List:", todoList);
 
 // 4. Password Generator
 let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+let passwordLength = Number(prompt("Enter password length: "));
 let password = "";
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < passwordLength; i++) {
     let index = Math.floor(Math.random() * chars.length);
     password += chars[index];
 }
 console.log("Password:", password);
 
 // 5. Quiz Application
-let answer = "JavaScript";
+let answer = prompt("Which language are you learning? ");
 if (answer === "JavaScript") {
     console.log("Correct Answer");
 } else {
     console.log("Wrong Answer");
 }
 
-
 // =====================================================
 // LOGIC BUILDING CHALLENGES
 // =====================================================
 
 // 1. Missing number in array
-let missingArr = [1, 2, 4, 5];
+let missingArr = prompt("Enter numbers with one missing separated by comma: ").split(",").map(Number);
+let missingLimit = Number(prompt("Enter maximum number: "));
 let missingNum = 0;
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= missingLimit; i++) {
     if (!missingArr.includes(i)) {
         missingNum = i;
     }
@@ -701,15 +721,15 @@ for (let i = 1; i <= 5; i++) {
 console.log("Missing Number:", missingNum);
 
 // 2. Anagram check
-let word1 = "listen";
-let word2 = "silent";
+let word1 = prompt("Enter first word: ");
+let word2 = prompt("Enter second word: ");
 let sortedWord1 = word1.split("").sort().join("");
 let sortedWord2 = word2.split("").sort().join("");
 console.log("Anagram:", sortedWord1 === sortedWord2);
 
 // 3. Rotate array by k positions
-let rotateArr = [1, 2, 3, 4, 5];
-let k = 2;
+let rotateArr = prompt("Enter array to rotate separated by comma: ").split(",").map(Number);
+let k = Number(prompt("Enter rotate count: "));
 for (let i = 0; i < k; i++) {
     let last = rotateArr.pop();
     rotateArr.unshift(last);
@@ -717,7 +737,7 @@ for (let i = 0; i < k; i++) {
 console.log("Rotated Array:", rotateArr);
 
 // 4. Duplicate elements
-let dupArr = [1, 2, 3, 2, 4, 1];
+let dupArr = prompt("Enter array with duplicates separated by comma: ").split(",").map(Number);
 let duplicates = [];
 for (let i = 0; i < dupArr.length; i++) {
     for (let j = i + 1; j < dupArr.length; j++) {
@@ -742,7 +762,6 @@ for (let i = 0; i < nestedArr.length; i++) {
 }
 console.log("Flat Array:", flatArr);
 
-
 // =====================================================
 // DEBUGGING CHALLENGES
 // =====================================================
@@ -761,12 +780,12 @@ function returnValue() {
 console.log(returnValue());
 
 // 3. Correct number sorting
-let sortNums = [10, 5, 20, 1];
+let sortNums = prompt("Enter numbers to sort separated by comma: ").split(",").map(Number);
 sortNums.sort((a, b) => a - b);
-console.log(sortNums);
+console.log("Sorted:", sortNums);
 
 // 4. Scope issue fixed
-let message = "Hello";
+let message = prompt("Enter message: ");
 function showMessage() {
     console.log(message);
 }
