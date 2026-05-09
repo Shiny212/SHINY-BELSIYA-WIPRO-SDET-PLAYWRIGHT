@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "wipro-sdet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT/issues"
+  },
+  "homepage": "https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT#readme"
+}
