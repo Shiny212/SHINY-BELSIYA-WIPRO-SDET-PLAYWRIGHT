@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "axios": "^1.16.0",
     "prompt-sync": "^4.2.0"
   },
   "name": "wipro-sdet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT/issues"
   },
-  "homepage": "https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT#readme"
+  "homepage": "https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT#readme",
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0"
+  }
 }
