@@ -1,0 +1,129 @@
+================================================================================
+PLAYWRIGHT TRAINING SYNOPSIS – DAY 12
+================================================================================
+
+--------------------------------------------------------------------------------
+DAY 12: PLAYWRIGHT TEST AUTOMATION & GITHUB WORKFLOW
+--------------------------------------------------------------------------------
+
+The concepts covered on Day 12 focus on Playwright framework setup, browser
+automation testing, GitHub Actions workflow integration, URL validation,
+and HTML report generation.
+
+--------------------------------------------------------------------------------
+1. PLAYWRIGHT FRAMEWORK
+--------------------------------------------------------------------------------
+- Playwright is an end-to-end automation testing framework.
+- Developed by Microsoft.
+- Supports Chromium, Firefox, and WebKit browsers.
+- Used for browser automation and UI testing.
+
+--------------------------------------------------------------------------------
+2. PROJECT INITIALIZATION
+--------------------------------------------------------------------------------
+- Node.js project initialized using npm.
+- Playwright installed using npm command.
+
+Commands:
+    npm init -y
+    npm init playwright@latest
+
+--------------------------------------------------------------------------------
+3. PLAYWRIGHT CONFIGURATION
+--------------------------------------------------------------------------------
+- playwright.config.js file is used for framework configuration.
+- Defines browser settings and test execution settings.
+- Configures projects for multiple browsers.
+
+Example:
+    module.exports = defineConfig({
+        testDir: './playwright test'
+    });
+
+--------------------------------------------------------------------------------
+4. GITHUB ACTIONS WORKFLOW
+--------------------------------------------------------------------------------
+- GitHub workflow automates Playwright test execution.
+- Workflow file created inside:
+    .github/workflows/playwright.yml
+
+- Workflow runs automatically on:
+    push
+    pull_request
+
+--------------------------------------------------------------------------------
+5. PLAYWRIGHT TEST SCRIPTS
+--------------------------------------------------------------------------------
+- Test scripts created using JavaScript.
+- Browser navigation and URL verification performed.
+
+Files Created:
+    example.spec.js
+    techx.spec.js
+
+--------------------------------------------------------------------------------
+6. TITLE VALIDATION
+--------------------------------------------------------------------------------
+- Website title verified using Playwright assertions.
+
+Example:
+    await expect(page).toHaveTitle(/Playwright/);
+
+--------------------------------------------------------------------------------
+7. URL VALIDATION
+--------------------------------------------------------------------------------
+- URL changes validated after button click.
+
+Example:
+    expect(page.url()).toBe(
+        "https://www.techxincorporation.com/contact"
+    );
+
+--------------------------------------------------------------------------------
+8. BUTTON CLICK AUTOMATION
+--------------------------------------------------------------------------------
+- Buttons identified using getByRole().
+- Click operation automated using Playwright.
+
+Example:
+    await page.getByRole('link', {
+        name: 'Get started'
+    }).click();
+
+--------------------------------------------------------------------------------
+9. HTML REPORT GENERATION
+--------------------------------------------------------------------------------
+- Playwright automatically generates HTML reports.
+- Reports can be viewed using:
+
+Command:
+    npx playwright show-report
+
+--------------------------------------------------------------------------------
+10. TEST EXECUTION
+--------------------------------------------------------------------------------
+- Playwright tests executed using terminal commands.
+
+Commands:
+    npx playwright test
+    npx playwright test --headed
+
+--------------------------------------------------------------------------------
+11. REAL-TIME USAGE
+--------------------------------------------------------------------------------
+- Automated website testing
+- UI validation
+- Cross-browser testing
+- CI/CD automation
+- Regression testing
+
+--------------------------------------------------------------------------------
+12. KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+- Playwright simplifies browser automation.
+- GitHub Actions automates test execution.
+- URL and title validation improve testing accuracy.
+- HTML reports help analyze test execution.
+- Playwright supports multiple browsers efficiently.
+
+================================================================================
