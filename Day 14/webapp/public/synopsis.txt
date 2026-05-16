@@ -1,177 +1,99 @@
 ================================================================================
-PLAYWRIGHT TRAINING SYNOPSIS – DAY 13
+PLAYWRIGHT TRAINING SYNOPSIS – DAY 14
 ================================================================================
 
 --------------------------------------------------------------------------------
-DAY 13: PLAYWRIGHT LOGIN AUTOMATION WITH EXPRESS SERVER
+DAY 14: MODULES, LOGIN TESTING AND PLAYWRIGHT EXECUTION
 --------------------------------------------------------------------------------
 
-The concepts covered on Day 13 focus on creating a web application using
-Express.js, building a login form, validating user credentials, and automating
-login testing using Playwright.
+The concepts covered on Day 14 focus on creating reusable modules, running
+Playwright tests, executing login automation, understanding server dependency,
+and analyzing test reports.
 
 --------------------------------------------------------------------------------
-1. EXPRESS SERVER SETUP
---------------------------------------------------------------------------------
-- Express.js is used to create backend server applications.
-- dotenv package is used to manage environment variables.
-- Static files are served using express.static().
-
-Example:
-
-    const express = require('express');
-    const app = express();
-
---------------------------------------------------------------------------------
-2. ENVIRONMENT VARIABLES
---------------------------------------------------------------------------------
-- .env file stores configuration values.
-- PORT value used to run application.
-
-Example:
-
-    PORT=3000
-
---------------------------------------------------------------------------------
-3. ROUTING IN EXPRESS
---------------------------------------------------------------------------------
-Routes created:
-
-GET /
-    Loads index.html
-
-GET /login
-    Loads login.html
-
-POST /loginwithcreds
-    Validates login credentials
-
---------------------------------------------------------------------------------
-4. LOGIN PAGE DEVELOPMENT
+1. MODULES IN JAVASCRIPT
 --------------------------------------------------------------------------------
 Files Created:
 
-    login.html
-    login.css
+    cal.mjs
+    op.mjs
 
-Features:
+Purpose:
 
-- Username field
-- Password field
-- Login button
-- Error message display
-
---------------------------------------------------------------------------------
-5. FORM VALIDATION
---------------------------------------------------------------------------------
-Validation Conditions:
-
-If:
-
-    username.length <= 3
-
-OR
-
-    password.length <= 5
-
-Output:
-
-    Username length must be greater than 3 & Password 5
-
-Valid Login:
-
-Username:
-
-    admin123
-
-Password:
-
-    admin123
-
-Output:
-
-    Login successful
-
-Invalid Credentials:
-
-Output:
-
-    Invalid credentials
+- Export functions
+- Import reusable logic
+- Reduce duplicate code
 
 --------------------------------------------------------------------------------
-6. FETCH API IMPLEMENTATION
+2. MJS FILES
 --------------------------------------------------------------------------------
-Used to send login request:
+Extension:
+
+    .mjs
+
+Purpose:
+
+- ES Modules support
+- Uses import/export
 
 Example:
 
-    fetch('/loginwithcreds', {
+    export function add(){}
 
-        method:'POST'
+--------------------------------------------------------------------------------
+3. LOGIN AUTOMATION TESTING
+--------------------------------------------------------------------------------
+Playwright tested:
 
-    })
+- Valid login
+- Invalid login
+- Input validation
+
+--------------------------------------------------------------------------------
+4. SERVER DEPENDENCY
+--------------------------------------------------------------------------------
+Before running tests:
+
+Command:
+
+    node index.js
+
+Expected:
+
+    App started on PORT:3000
+
+Reason:
+
+- Server must run before Playwright tests
+
+--------------------------------------------------------------------------------
+5. PLAYWRIGHT TEST EXECUTION
+--------------------------------------------------------------------------------
+Command:
+
+    npx playwright test
 
 Purpose:
 
-- Sends credentials to backend
-- Receives response
-- Displays messages dynamically
+- Run automated tests
 
 --------------------------------------------------------------------------------
-7. PLAYWRIGHT AUTOMATION
+6. ERROR ANALYSIS
 --------------------------------------------------------------------------------
-Playwright used for:
+Error:
 
-- Filling username
-- Filling password
-- Clicking login button
-- Verifying output message
+    ERR_CONNECTION_REFUSED
 
-Example:
+Cause:
 
-    await username.fill();
+- Server not started
 
-    await password.fill();
+Solution:
 
-    await btn.click();
+    node index.js
 
 --------------------------------------------------------------------------------
-8. DATA DRIVEN TESTING
---------------------------------------------------------------------------------
-Multiple login scenarios tested using:
-
-    const loginData = []
-
-Cases:
-
-- Invalid username
-- Invalid password
-- Valid credentials
-- Wrong credentials
-
---------------------------------------------------------------------------------
-9. UTILS FUNCTION
---------------------------------------------------------------------------------
-utils.js created to avoid repeated code.
-
-Purpose:
-
-- Reusable login testing function
-
---------------------------------------------------------------------------------
-10. GITHUB ACTIONS WORKFLOW
---------------------------------------------------------------------------------
-Workflow file:
-
-    playwright.yml
-
-Purpose:
-
-- Runs Playwright tests automatically
-- Generates reports
-
---------------------------------------------------------------------------------
-11. HTML REPORT GENERATION
+7. HTML REPORT
 --------------------------------------------------------------------------------
 Command:
 
@@ -179,26 +101,25 @@ Command:
 
 Purpose:
 
-- View test execution results
-- Analyze passed/failed tests
+- View passed/failed tests
+- Screenshots
+- Trace files
 
 --------------------------------------------------------------------------------
-12. REAL-TIME USAGE
+8. REAL-TIME USAGE
 --------------------------------------------------------------------------------
+- End-to-end testing
 - Login testing
-- Form validation testing
-- Web application testing
-- Regression testing
-- CI/CD automation
+- Web automation
+- Debugging automation failures
 
 --------------------------------------------------------------------------------
 KEY TAKEAWAYS
 --------------------------------------------------------------------------------
-- Learned Express server setup.
-- Learned frontend and backend integration.
-- Implemented login validation.
-- Automated login testing using Playwright.
-- Generated reports and configured workflows.
-- Practiced end-to-end web testing.
+- Learned ES modules using .mjs
+- Performed Playwright login automation
+- Understood server dependency before testing
+- Analyzed errors and reports
+- Practiced test execution workflow
 
 ================================================================================
