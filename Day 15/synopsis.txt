@@ -1,0 +1,89 @@
+================================================================================
+PLAYWRIGHT TRAINING SYNOPSIS – DAY 15
+================================================================================
+
+--------------------------------------------------------------------------------
+DAY 15: PLAYWRIGHT ANNOTATIONS AND TEST STEPS
+--------------------------------------------------------------------------------
+
+The concepts covered on Day 15 focus on Playwright annotations, test timeout
+handling, expected failures, skipped tests, fixme tests, and test.step reporting.
+
+--------------------------------------------------------------------------------
+1. PLAYWRIGHT ANNOTATIONS
+--------------------------------------------------------------------------------
+- Annotations are used to control test execution.
+- They help mark tests as skipped, failed, slow, or incomplete.
+
+--------------------------------------------------------------------------------
+2. test.skip()
+--------------------------------------------------------------------------------
+- Used to skip a test.
+- The skipped test will not run.
+
+Example:
+    test.skip('Skip this test because feature is not ready', async ({ page }) => {
+        await page.goto('https://example.com');
+    });
+
+--------------------------------------------------------------------------------
+3. test.fail()
+--------------------------------------------------------------------------------
+- Used when a test is expected to fail.
+- If the test passes, Playwright marks it as unexpected.
+
+Example:
+    test.fail();
+
+--------------------------------------------------------------------------------
+4. test.fixme()
+--------------------------------------------------------------------------------
+- Used when a test is broken or not ready.
+- It works like skip but shows that the test needs fixing.
+
+--------------------------------------------------------------------------------
+5. test.slow()
+--------------------------------------------------------------------------------
+- Used for slow tests.
+- It increases the timeout for that test.
+
+Example:
+    test.slow();
+
+--------------------------------------------------------------------------------
+6. test.setTimeout()
+--------------------------------------------------------------------------------
+- Used to set custom timeout for a test.
+
+Example:
+    test.setTimeout(10000);
+
+--------------------------------------------------------------------------------
+7. test.step()
+--------------------------------------------------------------------------------
+- Used to group test actions.
+- Steps are clearly shown in HTML reports.
+
+Example:
+    await test.step('Navigate to website', async () => {
+        await page.goto('https://example.com');
+    });
+
+--------------------------------------------------------------------------------
+8. REAL-TIME USAGE
+--------------------------------------------------------------------------------
+- Skipping incomplete features
+- Marking known failures
+- Handling slow tests
+- Improving test report readability
+- Debugging test execution flow
+
+--------------------------------------------------------------------------------
+KEY TAKEAWAYS
+--------------------------------------------------------------------------------
+- Learned Playwright annotations.
+- Used skip, fail, fixme, slow, timeout, and test.step.
+- Understood how annotations improve test control.
+- Practiced reporting-friendly test writing.
+
+================================================================================
