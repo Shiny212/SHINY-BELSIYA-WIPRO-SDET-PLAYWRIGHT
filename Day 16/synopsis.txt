@@ -1,0 +1,48 @@
+=========================================================
+PLAYWRIGHT TRAINING SYNOPSIS — DAY 16
+=========================================================
+
+Topics Covered:
+
+• Playwright Hooks
+    - beforeEach()
+
+• Alert Handling
+    - page.on('dialog')
+    - dialog.accept()
+
+• Assertions
+    - expect()
+    - toBe()
+    - toBeVisible()
+    - toHaveText()
+
+• Data Driven Testing
+    - Array of login credentials
+    - Dynamic test generation using forEach()
+
+• Functional Login Testing
+    - Valid login
+    - Invalid login
+    - Input validation
+
+• Locators
+    - locator()
+    - getByRole()
+
+• Navigation
+    - page.goto()
+
+• Form Handling
+    - fill()
+    - click()
+
+=========================================================
+
+Summary:
+
+Learned browser alert handling, hooks, data-driven testing,
+multiple login validations, assertions, and functional
+testing using Playwright.
+
+=========================================================
