@@ -1,0 +1,49 @@
+=========================================================
+PLAYWRIGHT TRAINING SYNOPSIS — DAY 17
+=========================================================
+
+Topics Covered:
+
+• Authentication State Management
+    - storageState()
+    - Saving login session as JSON
+    - Reusing authentication state
+
+• Serial Execution
+    - test.describe.configure({ mode: "serial" })
+
+• Login Automation
+    - Username and password handling
+    - Session persistence
+
+• Parameterized Testing
+    - Running tests using multiple datasets
+    - Dynamic test generation using loops
+
+• Soft Assertions
+    - expect.soft()
+    - Continue execution after assertion failure
+
+• Polling Assertions
+    - expect.poll()
+    - Repeated checking until condition is met
+
+• Test Hooks and Configuration
+    - test.use()
+    - storageState usage
+
+• Assertions
+    - expect()
+    - toContainText()
+    - toHaveTitle()
+    - toBe()
+
+=========================================================
+
+Summary:
+
+Learned authentication state handling, session reuse,
+parameterized testing, soft assertions, polling assertions,
+and serial execution in Playwright.
+
+=========================================================
