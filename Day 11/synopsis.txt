@@ -1,0 +1,17 @@
+=========================================================
+PLAYWRIGHT TRAINING SYNOPSIS — DAY 11
+=========================================================
+
+Topics Covered:
+
+• TypeScript basics
+• Interfaces
+• Generics
+• Utility types
+• Type checking
+
+Summary:
+
+Learned TypeScript concepts and implemented type-safe coding practices.
+
+=========================================================

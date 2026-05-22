@@ -1,0 +1,20 @@
+=========================================================
+JAVASCRIPT TRAINING SYNOPSIS — DAY 3
+=========================================================
+
+Topics Covered:
+
+• JavaScript practice problems
+• Variables and data types
+• Conditional statements
+• Loops
+• Functions
+• Arrays
+• Problem solving using JS
+
+Summary:
+
+Learned JavaScript basics through practice problems,
+implemented logic building exercises and improved coding skills.
+
+=========================================================

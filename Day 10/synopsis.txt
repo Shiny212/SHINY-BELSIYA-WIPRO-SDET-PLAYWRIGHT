@@ -1,0 +1,17 @@
+=========================================================
+PLAYWRIGHT TRAINING SYNOPSIS — DAY 10
+=========================================================
+
+Topics Covered:
+
+• Express server setup
+• Routes
+• Node.js basics
+• Running local server
+• PORT configuration
+
+Summary:
+
+Learned creating Express applications and executing server-side code.
+
+=========================================================

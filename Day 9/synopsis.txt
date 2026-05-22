@@ -1,0 +1,16 @@
+=========================================================
+JAVASCRIPT TRAINING SYNOPSIS — DAY 9
+=========================================================
+
+Topics Covered:
+
+• Asynchronous JavaScript
+• Callbacks
+• Promises
+• Async / Await
+
+Summary:
+
+Learned asynchronous programming and handling delayed operations.
+
+=========================================================

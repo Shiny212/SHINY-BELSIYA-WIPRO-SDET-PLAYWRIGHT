@@ -1,0 +1,16 @@
+=========================================================
+JAVASCRIPT TRAINING SYNOPSIS — DAY 8
+=========================================================
+
+Topics Covered:
+
+• DOM manipulation
+• Event handling
+• HTML + JS interaction
+• Form handling
+
+Summary:
+
+Learned dynamic webpage interaction using JavaScript and DOM.
+
+=========================================================
