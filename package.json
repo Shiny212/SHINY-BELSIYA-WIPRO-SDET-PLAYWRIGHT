@@ -7,9 +7,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT.git"
@@ -23,6 +21,7 @@
   },
   "homepage": "https://github.com/Shiny212/SHINY-BELSIYA-WIPRO-SDET-PLAYWRIGHT#readme",
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
     "@types/node": "^25.7.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0"
