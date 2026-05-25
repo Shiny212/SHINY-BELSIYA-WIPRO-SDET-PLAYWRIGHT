@@ -1,0 +1,28 @@
+=========================================================
+PLAYWRIGHT TRAINING SYNOPSIS — DAY 21
+=========================================================
+
+Topics Covered:
+
+• GitHub Actions workflow
+• Allure reporting integration
+• JioMart automation testing
+• Authentication handling using auth.json
+• HTML reporting
+• Cross-browser testing
+• Playwright locators
+• Profile validation
+• Search automation
+• Reporter configuration
+• GenAI usage for debugging, understanding errors,
+  generating explanations and improving automation logic
+
+Summary:
+
+Learned authentication state handling, Allure reports,
+GitHub workflow automation, Playwright testing on
+e-commerce websites using JioMart, and how GenAI can
+support debugging, code understanding, and improving
+test automation productivity.
+
+=========================================================
