@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: Day21
+        working-directory: Day 21
 
     steps:
     - uses: actions/checkout@v4
@@ -39,5 +39,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: Day21/allure-report
+        publish_dir: Day 21/allure-report
         publish_branch: gh-pages
